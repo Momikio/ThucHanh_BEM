@@ -1,0 +1,142 @@
+*{
+  padding:0 ; 
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+display: flex;
+height:100vh ;
+flex-direction: column;
+font-family: sans-serif;
+background-color: #f4f4f5;
+}
+body > div{
+  margin: auto;
+}
+.btn{
+  display:inline-block ;
+  padding: 12px 48px;
+  border-radius:50px;
+  cursor: pointer;
+color: #fff;
+min-width: 215px;
+
+}
+.btn:hover{
+  opacity: 0.7;
+}
+
+.btn{
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.btn--success{
+  background-color:#71be34;
+}
+.btn--danger{
+  background-color :#ff623d;
+}
+.btn--warning{
+  background-color:#fbc022 ;
+}
+.btn--info{
+  background-color:#2f86eb;
+}
+
+  /* ======= Toast message ======== */
+   #toast{
+    position: fixed;
+    top:32px;
+    right: 32px;
+  }
+.toast{
+  z-index: 9999;
+     display:flex;
+    align-items:center;
+      background-color: #fff;
+      border-radius: 2px;
+      max-width: 450px;
+      min-width: 400px ;
+      border-left: 4px solid ;
+      padding : 20px  0 ;
+      box-shadow: 0 5px 8px rgba(0 , 0 , 0 , 0.8);
+        transition: all linear 0.3s;
+  }
+  @keyframes sliderInline{
+    from{
+      opacity:0 ;
+      transform: translateX(calc(100% + 32px));
+    }
+    to{
+      opacity: 1;
+      transform:translateX();
+    }
+  }
+  @keyframes fadeOut{
+    to{
+      opacity: 0;
+   
+    }
+  }
+  .toast+ .toast{
+    margin-top: 24px;
+    line-height:1.5 ;
+  }
+  .toast__icon{
+      font-size: 24px;
+  }
+  .toast__close,
+  .toast__icon{
+padding : 0 16px ;
+  }
+  .toast__body{
+flex: 1;
+  }
+  .toast__title{
+font-size:17px ;
+font-weight: 600;
+color:#333;
+  }
+  .toast__msg{
+    font-size:14px ;
+color:#888;
+margin-top: 4px;
+line-height:1.5 ;
+  }
+  .toast__close{
+font-size:23px;
+color: rgba( 0 , 0 ,0 ,0.3);
+cursor: pointer;
+  }
+ 
+  .toast__close:hover{
+    opacity: 0.5;
+  }
+  
+.toast--success{
+border-color: #48d764;
+}
+.toast--success .toast__icon{
+  color:#48d764;
+}
+.toast--info{
+border-color: #2f86eb;
+}
+.toast--info .toast__icon{
+  color:#2f86eb ;
+}
+
+.toast--warning{
+border-color: #fbc022;
+}
+.toast--warning .toast__icon{
+  color:#fbc022;
+}
+.toast--error{
+border-color: #d11313;
+}
+.toast--error .toast__icon{
+  color:#d11313;
+}
+
+  
